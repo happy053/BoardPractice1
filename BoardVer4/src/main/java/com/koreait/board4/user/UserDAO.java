@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import com.koreait.board4.board.DBUtils;
+
 public class UserDAO {
 	public static int inUser(UserVO vo) {
 		Connection con = null;

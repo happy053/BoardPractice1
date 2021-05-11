@@ -1,4 +1,4 @@
-package com.koreait.board4.user;
+package com.koreait.board4.board;
 
 import java.io.IOException;
 

@@ -6,6 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.koreait.board4.board.MyUtils;
 
 @WebServlet("/user/login")
 public class LoginServlet extends HttpServlet {
@@ -26,6 +29,9 @@ public class LoginServlet extends HttpServlet {
 		int result = UserDAO.loginUser(vo);
 		
 		if(result == 1) {
+			HttpSession hs = request.getSession();
+			hs.setAttribute("loginSuccess", true);
+			
 			response.sendRedirect("/board/list");
 			return;
 		}

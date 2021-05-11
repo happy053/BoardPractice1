@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.koreait.board4.board.MyUtils;
+
 @WebServlet("/user/join")
 public class JoinServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
